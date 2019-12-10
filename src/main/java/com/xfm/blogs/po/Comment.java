@@ -14,22 +14,22 @@ public class Comment {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String nickname;
-    private String email;
-    private String content;
-    private String avatar;
+    private Long id;                        //主键
+    private String nickname;                //昵称
+    private String email;                   //邮箱
+    private String content;                 //内容
+    private String avatar;                  //头像
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
+    private Date createTime;                //创建时间
 
     @ManyToOne
-    private Blog blog;
+    private Blog blog;                      //所属博客，也就是在那个博客下评论的
 
     @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComments = new ArrayList<>();
+    private List<Comment> replyComments = new ArrayList<>(); //这条评论的回复
 
     @ManyToOne
-    private Comment parentComment;
+    private Comment parentComment;          //这条评论是回复那条评论的
 
     public Comment() {
     }

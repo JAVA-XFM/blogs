@@ -13,11 +13,11 @@ public class Type {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String name;
+    private Long id;            //主键
+    private String name;        //类型名字
 
     @OneToMany(mappedBy = "type")
-    private List<Blog> blogs = new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();   //有多少这种类型的博客
 
     public Type() {
     }

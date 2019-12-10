@@ -13,11 +13,11 @@ public class Tag {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String name;
+    private Long id;                //主键
+    private String name;            //标签名字
 
     @ManyToMany(mappedBy = "tags")
-    private List<Blog> blogs = new ArrayList<>();
+    private List<Blog> blogs = new ArrayList<>();   //有多少这种标签的博客
 
     public Tag() {
     }
