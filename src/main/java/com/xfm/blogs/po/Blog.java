@@ -14,32 +14,33 @@ public class Blog {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private Long id;                    //主键
 
-    private String title;
-    private String content;
-    private String firstPicture;
-    private String flag;
-    private Integer views;
-    private boolean appreciation;
-    private boolean shareStatement;
-    private boolean commentabled;
-    private boolean published;
-    private boolean recommend;
+    private String title;               //标题
+    @Column(name="content", length = 20000)
+    private String content;             //内容
+    private String firstPicture;        //首图
+    private String flag;                //标记
+    private Integer views;              //浏览次数
+    private boolean appreciation;       //赞赏是否开启
+    private boolean shareStatement;     //版权是否开启
+    private boolean commentabled;       //评论是否开启
+    private boolean published;          //是否发布
+    private boolean recommend;          //是否推荐
     @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
+    private Date createTime;            //创建时间
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updateTime;
+    private Date updateTime;            //修改时间
 
     @ManyToOne
-    private Type type;
+    private Type type;                  //所属类型
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Tag> tags = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>(); //包含的标签
 
 
     @ManyToOne
-    private User user;
+    private User user;                  //所属用户
 
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments = new ArrayList<>();

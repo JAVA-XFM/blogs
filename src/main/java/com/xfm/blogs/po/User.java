@@ -19,7 +19,7 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private String avatar;
+    private String avatar;                  //头像
     private Integer type;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
