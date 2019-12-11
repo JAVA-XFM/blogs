@@ -2,6 +2,8 @@ package com.xfm.blogs.web.admin;
 
 import com.xfm.blogs.po.User;
 import com.xfm.blogs.service.UserService;
+import com.xfm.blogs.util.AesUtils;
+import com.xfm.blogs.util.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,16 +27,20 @@ public class LoginController {
     private UserService userService;
 
     @GetMapping
-    public String loginPage() {
+    public String loginPage(Model model) {
+        String key = RandomUtils.generate16String();
+        model.addAttribute("key",key);
         return "admin/login";
     }
 
 
     @PostMapping("/login")
     public String login(@RequestParam String username,
-                        @RequestParam String password,
+                        @RequestParam String encryptedPwd,
+                        @RequestParam String sendKey,
                         HttpSession session,
                         RedirectAttributes attributes) {
+        String password = AesUtils.decrypt(encryptedPwd,sendKey);
         User user = userService.checkUser(username, password);
         if (user != null) {
             user.setPassword(null);

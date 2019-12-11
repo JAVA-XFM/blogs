@@ -12,6 +12,8 @@
 <br>
 <br>
 <br>
+<!-- 隐藏域保存key值 -->
+<input type="hidden" id="key" name="key" th:value="${key}" />
  <div class="m-container-small m-padded-tb-massive" style="max-width: 30em !important;">
    <div class="ur container">
      <div class="ui middle aligned center aligned grid">
@@ -21,7 +23,8 @@
              管理后台登录
            </div>
          </h2>
-         <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+         <form class="ui large form" method="post" th:action="@{/admin/login}">
+           <input type="hidden" name="sendKey" id="sendKey" value="" />
            <div class="ui  segment">
              <div class="field">
                <div class="ui left icon input">
@@ -32,10 +35,10 @@
              <div class="field">
                <div class="ui left icon input">
                  <i class="lock icon"></i>
-                 <input type="password" name="password" placeholder="密码">
+                 <input type="password" name="encryptedPwd" id="password" placeholder="密码">
                </div>
              </div>
-             <button class="ui fluid large teal submit button">登   录</button>
+             <button class="ui fluid large teal submit button" id="submit">登   录</button>
            </div>
 
            <div class="ui error mini message"></div>
@@ -52,6 +55,8 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <!--/*/</th:block>/*/-->
+
+<script src="../../static/js/crypto-js.js" th:src="@{/crypto-js-3.1.9-1/crypto-js.js}"></script>
 
 <script>
   $('.ui.form').form({
@@ -71,6 +76,38 @@
         }]
       }
     }
+  });
+  $(function(){
+    $("#submit").click(function () {
+      var $key = $("#key").val();
+      //var username = $("input[name='username']").val();
+      var $password = $("input[name='encryptedPwd']").val();
+      /*if (username == "" || password == "") {
+        alert("用户名、密码、验证码不能为空！");
+        return false;
+      }*/
+      var key = CryptoJS.enc.Utf8.parse($key);
+      console.log("key:" + $key + ",key:" + key);
+      var password = CryptoJS.enc.Utf8.parse($password);
+      var encrypted = CryptoJS.AES.encrypt(password, key, {mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7});
+      var encryptedPwd = encrypted.toString();
+      $("#password").val(encryptedPwd);
+      $("#sendKey").val($key);
+
+      /*console.log("encrypted:" + encrypted);
+      console.log("encryptedPwd:" + encryptedPwd);
+      //解密
+      var decrypt = CryptoJS.AES.decrypt(encryptedPwd, key, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+      });
+      var testDecryptStr = CryptoJS.enc.Utf8.stringify(decrypt).toString();
+
+      console.log("decrypt:" + decrypt);
+      console.log("testDecryptStr:" + testDecryptStr);*/
+
+
+    });
   });
 </script>
 
