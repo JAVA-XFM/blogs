@@ -11,4 +11,6 @@ public interface TypeService {
 
     Type save(Type type);
 
+    void delete(Long id) throws Exception;
+
 }

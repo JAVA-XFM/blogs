@@ -28,4 +28,9 @@ public class TypeServiceImpl implements TypeService {
 
         return typeRepository.save(type);
     }
+
+    @Override
+    public void delete(Long id) throws Exception{
+        typeRepository.delete(id);
+    }
 }

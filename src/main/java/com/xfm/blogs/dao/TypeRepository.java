@@ -13,6 +13,6 @@ public interface TypeRepository extends JpaRepository<Type, Long> {
 
     Type save(Type type);
 
-
+    void delete(Long id);
 
 }

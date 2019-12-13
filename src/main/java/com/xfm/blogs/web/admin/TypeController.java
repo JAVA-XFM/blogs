@@ -1,18 +1,16 @@
 package com.xfm.blogs.web.admin;
 
-import ch.qos.logback.core.encoder.EchoEncoder;
 import com.xfm.blogs.po.Type;
 import com.xfm.blogs.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
@@ -21,17 +19,12 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String types(Model model){
-        /*Type type = new Type();
-        type.setName("mysql");
-        Type type1 = typeService.save(type);
-        System.out.println("=============type1============" + type1.toString());*/
+    public String types(Model model,@PageableDefault(size = 3,sort = {"id"},direction = Sort.Direction.DESC)
+            Pageable pageable){
         try{
-            Pageable pageable = new PageRequest(0,10, Sort.Direction.DESC,"id");
-            Page<Type> page = typeService.findAll(pageable);
-            //List<Type> typeList = page.getContent();
-            model.addAttribute("page", page);
-            if(page.getContent().size() == 0){
+            Page<Type> pages = typeService.findAll(pageable);
+            model.addAttribute("page", pages);
+            if(pages.getContent().size() == 0){
                 model.addAttribute("message","没有任何类型哦！！快去添加一些类型吧！");
             }
         }catch (Exception e){
@@ -107,9 +100,17 @@ public class TypeController {
     }
 
     @GetMapping("/types/{id}/delete")
-    public String delete() {
+    public String delete(@PathVariable Long id, Model model) {
 
-        return "redirect:/admin/types";
+        try{
+            typeService.delete(id);
+            model.addAttribute("message", "删除成功");
+        }catch (Exception e){
+            e.printStackTrace();
+            model.addAttribute("message", "删除失败");
+        }
+
+        return "forward:/admin/types";
     }
 
 }
