@@ -13,4 +13,8 @@ public interface TypeService {
 
     void delete(Long id) throws Exception;
 
+    Type updateType(Type type);
+
+    Type findByName(String name);
+
 }

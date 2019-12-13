@@ -15,4 +15,6 @@ public interface TypeRepository extends JpaRepository<Type, Long> {
 
     void delete(Long id);
 
+    Type findByName(String name);
+
 }

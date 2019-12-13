@@ -19,7 +19,7 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String types(Model model,@PageableDefault(size = 3,sort = {"id"},direction = Sort.Direction.DESC)
+    public String types(Model model,@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
             Pageable pageable){
         try{
             Page<Type> pages = typeService.findAll(pageable);
@@ -57,19 +57,27 @@ public class TypeController {
     public String post(@RequestParam String name, Model model) {
         Type type = new Type();
         type.setName(name);
-        try{
-            Type returnType = typeService.save(type);
-            if (returnType == null){
-                model.addAttribute("name",name);
-                model.addAttribute("message","添加失败");
+        Type t = typeService.findByName(name);
+        if (t == null){
+            try{
+                Type returnType = typeService.save(type);
+                if (returnType == null){
+                    model.addAttribute("name",name);
+                    model.addAttribute("message","添加失败");
+                    return  "admin/types-input";
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+                model.addAttribute("name", name);
+                model.addAttribute("message", "系统异常");
                 return  "admin/types-input";
             }
-        }catch(Exception e){
-            e.printStackTrace();
+        }else{
             model.addAttribute("name", name);
-            model.addAttribute("message", "系统异常");
+            model.addAttribute("message", "该类型已存在");
             return  "admin/types-input";
         }
+
 
         return "redirect:/admin/types";
     }
@@ -81,7 +89,7 @@ public class TypeController {
         type.setName(name);
         type.setId(id);
         try{
-            Type returnType = typeService.save(type);
+            Type returnType = typeService.updateType(type);
             if(returnType == null){
                 model.addAttribute("id", id);
                 model.addAttribute("name", name);

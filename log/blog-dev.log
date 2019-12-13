@@ -541,3 +541,211 @@ org.springframework.web.bind.MissingServletRequestParameterException: Required i
 2019-12-13 15:19:52.757  INFO 2096 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2019-12-13 15:19:52.769  INFO 2096 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
 2019-12-13 15:19:58.022  INFO 2096 --- [http-nio-8080-exec-10] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-13 15:54:06.060  INFO 10732 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Starting BlogsApplication on DESKTOP-6ACJ4L4 with PID 10732 (E:\GitHub_project\blogs\target\classes started by Xin Li in E:\GitHub_project\blogs)
+2019-12-13 15:54:06.062  INFO 10732 --- [restartedMain] com.xfm.blogs.BlogsApplication           : The following profiles are active: dev
+2019-12-13 15:54:06.536  INFO 10732 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a030995: startup date [Fri Dec 13 15:54:06 CST 2019]; root of context hierarchy
+2019-12-13 15:54:09.628  INFO 10732 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-12-13 15:54:09.640  INFO 10732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-13 15:54:09.641  INFO 10732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-12-13 15:54:09.838  INFO 10732 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-13 15:54:09.839  INFO 10732 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3303 ms
+2019-12-13 15:54:10.095  INFO 10732 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-13 15:54:10.100  INFO 10732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-13 15:54:10.101  INFO 10732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-13 15:54:10.102  INFO 10732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-13 15:54:10.102  INFO 10732 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-13 15:54:10.791  INFO 10732 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-13 15:54:10.810  INFO 10732 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-13 15:54:11.010  INFO 10732 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-12-13 15:54:11.012  INFO 10732 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-13 15:54:11.013  INFO 10732 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-12-13 15:54:11.065  INFO 10732 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-13 15:54:11.367  INFO 10732 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-13 15:54:11.910  INFO 10732 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-13 15:54:12.141  INFO 10732 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 15:54:12.537  INFO 10732 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-13 15:54:13.258  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a030995: startup date [Fri Dec 13 15:54:06 CST 2019]; root of context hierarchy
+2019-12-13 15:54:13.341  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogs()
+2019-12-13 15:54:13.343  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogsInput],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogsInput()
+2019-12-13 15:54:13.346  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.loginPage(org.springframework.ui.Model)
+2019-12-13 15:54:13.347  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-13 15:54:13.347  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 15:54:13.349  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 15:54:13.349  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-13 15:54:13.350  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-13 15:54:13.350  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.post(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 15:54:13.351  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editPost(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 15:54:13.351  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 15:54:13.353  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.delete(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 15:54:13.353  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.types(org.springframework.ui.Model,org.springframework.data.domain.Pageable)
+2019-12-13 15:54:13.354  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.input()
+2019-12-13 15:54:13.354  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.post(java.lang.String,org.springframework.ui.Model)
+2019-12-13 15:54:13.354  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editPost(java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2019-12-13 15:54:13.354  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 15:54:13.355  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.index()
+2019-12-13 15:54:13.355  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.blog()
+2019-12-13 15:54:13.357  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-13 15:54:13.358  INFO 10732 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-13 15:54:13.413  INFO 10732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 15:54:13.413  INFO 10732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 15:54:13.435  INFO 10732 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-13 15:54:13.465  INFO 10732 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 15:54:14.528  INFO 10732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-13 15:54:14.583  INFO 10732 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-13 15:54:14.670  INFO 10732 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-12-13 15:54:14.675  INFO 10732 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Started BlogsApplication in 9.508 seconds (JVM running for 11.264)
+2019-12-13 15:54:33.771  INFO 10732 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-13 15:54:33.772  INFO 10732 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-13 15:54:33.832  INFO 10732 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 60 ms
+2019-12-13 15:58:19.232  WARN 10732 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2019-12-13 15:58:19.233 ERROR 10732 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry 'java类' for key 'un_name'
+2019-12-13 17:10:46.322  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Starting BlogsApplication on DESKTOP-6ACJ4L4 with PID 17284 (E:\GitHub_project\blogs\target\classes started by Xin Li in E:\GitHub_project\blogs)
+2019-12-13 17:10:46.323  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : The following profiles are active: dev
+2019-12-13 17:10:46.874  INFO 17284 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45fb7efe: startup date [Fri Dec 13 17:10:46 CST 2019]; root of context hierarchy
+2019-12-13 17:10:50.062  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-12-13 17:10:50.075  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-13 17:10:50.076  INFO 17284 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-12-13 17:10:50.257  INFO 17284 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-13 17:10:50.257  INFO 17284 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3384 ms
+2019-12-13 17:10:50.494  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-13 17:10:50.499  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-13 17:10:50.500  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-13 17:10:50.500  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-13 17:10:50.501  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-13 17:10:51.182  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:10:51.204  INFO 17284 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-13 17:10:51.451  INFO 17284 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-12-13 17:10:51.453  INFO 17284 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-13 17:10:51.455  INFO 17284 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-12-13 17:10:51.506  INFO 17284 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-13 17:10:51.798  INFO 17284 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-13 17:10:52.429  INFO 17284 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-13 17:10:52.717  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:10:53.201  INFO 17284 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-13 17:10:54.003  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45fb7efe: startup date [Fri Dec 13 17:10:46 CST 2019]; root of context hierarchy
+2019-12-13 17:10:54.102  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogs()
+2019-12-13 17:10:54.103  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogsInput],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogsInput()
+2019-12-13 17:10:54.107  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.loginPage(org.springframework.ui.Model)
+2019-12-13 17:10:54.109  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-13 17:10:54.110  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:10:54.112  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:10:54.112  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-13 17:10:54.113  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-13 17:10:54.113  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.post(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:10:54.113  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:10:54.114  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editPost(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:10:54.116  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.delete(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:10:54.117  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.types(org.springframework.ui.Model,org.springframework.data.domain.Pageable)
+2019-12-13 17:10:54.117  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.input()
+2019-12-13 17:10:54.118  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.post(java.lang.String,org.springframework.ui.Model)
+2019-12-13 17:10:54.118  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:10:54.118  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editPost(java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2019-12-13 17:10:54.119  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.index()
+2019-12-13 17:10:54.120  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.blog()
+2019-12-13 17:10:54.122  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-13 17:10:54.122  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-13 17:10:54.183  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:10:54.183  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:10:54.208  INFO 17284 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-13 17:10:54.246  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:10:55.626  INFO 17284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-13 17:10:55.708  INFO 17284 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-13 17:10:55.976  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-12-13 17:10:55.985  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Started BlogsApplication in 10.929 seconds (JVM running for 13.104)
+2019-12-13 17:10:56.575  INFO 17284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-13 17:10:56.579  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-13 17:10:56.649  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 69 ms
+2019-12-13 17:12:29.413  INFO 17284 --- [Thread-28] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45fb7efe: startup date [Fri Dec 13 17:10:46 CST 2019]; root of context hierarchy
+2019-12-13 17:12:29.415  INFO 17284 --- [Thread-28] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-12-13 17:12:29.417  INFO 17284 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:40.408  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Starting BlogsApplication on DESKTOP-6ACJ4L4 with PID 17284 (E:\GitHub_project\blogs\target\classes started by Xin Li in E:\GitHub_project\blogs)
+2019-12-13 17:12:40.408  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : The following profiles are active: dev
+2019-12-13 17:12:40.411  INFO 17284 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1333e82b: startup date [Fri Dec 13 17:12:40 CST 2019]; root of context hierarchy
+2019-12-13 17:12:41.478  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-12-13 17:12:41.485  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-13 17:12:41.485  INFO 17284 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-12-13 17:12:41.535  INFO 17284 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-12-13 17:12:41.536  INFO 17284 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1125 ms
+2019-12-13 17:12:41.585  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-13 17:12:41.585  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-13 17:12:41.586  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-13 17:12:41.586  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-13 17:12:41.586  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-13 17:12:41.921  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:41.921  INFO 17284 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-13 17:12:42.511  INFO 17284 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-13 17:12:42.528  INFO 17284 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-13 17:12:42.530  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:42.711  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1333e82b: startup date [Fri Dec 13 17:12:40 CST 2019]; root of context hierarchy
+2019-12-13 17:12:42.830  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-13 17:12:42.831  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-13 17:12:42.854  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:42.854  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:42.904  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:43.952  INFO 17284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-13 17:12:44.040  INFO 17284 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-13 17:12:44.164  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-12-13 17:12:44.172  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Started BlogsApplication in 3.874 seconds (JVM running for 121.291)
+2019-12-13 17:12:46.710  INFO 17284 --- [Thread-36] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1333e82b: startup date [Fri Dec 13 17:12:40 CST 2019]; root of context hierarchy
+2019-12-13 17:12:46.712  INFO 17284 --- [Thread-36] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-12-13 17:12:46.714  INFO 17284 --- [Thread-36] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:47.702  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Starting BlogsApplication on DESKTOP-6ACJ4L4 with PID 17284 (E:\GitHub_project\blogs\target\classes started by Xin Li in E:\GitHub_project\blogs)
+2019-12-13 17:12:47.702  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : The following profiles are active: dev
+2019-12-13 17:12:47.706  INFO 17284 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c69fc9: startup date [Fri Dec 13 17:12:47 CST 2019]; root of context hierarchy
+2019-12-13 17:12:48.944  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-12-13 17:12:48.945  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-13 17:12:48.945  INFO 17284 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-12-13 17:12:48.988  INFO 17284 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-12-13 17:12:48.989  INFO 17284 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1284 ms
+2019-12-13 17:12:49.157  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-12-13 17:12:49.159  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-12-13 17:12:49.160  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-12-13 17:12:49.160  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-12-13 17:12:49.160  INFO 17284 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-12-13 17:12:49.710  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:49.710  INFO 17284 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-13 17:12:50.589  INFO 17284 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-13 17:12:50.730  INFO 17284 --- [restartedMain] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-12-13 17:12:50.936  INFO 17284 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-13 17:12:51.165  INFO 17284 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-13 17:12:51.725  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c69fc9: startup date [Fri Dec 13 17:12:47 CST 2019]; root of context hierarchy
+2019-12-13 17:12:51.768  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogs],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogs()
+2019-12-13 17:12:51.768  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/blogsInput],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.BlogController.blogsInput()
+2019-12-13 17:12:51.774  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.loginPage(org.springframework.ui.Model)
+2019-12-13 17:12:51.774  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/logout],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.logout(javax.servlet.http.HttpSession)
+2019-12-13 17:12:51.775  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/login],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.LoginController.login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:12:51.781  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.delete(java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:12:51.782  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.input(org.springframework.ui.Model)
+2019-12-13 17:12:51.782  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.tags(org.springframework.data.domain.Pageable,org.springframework.ui.Model)
+2019-12-13 17:12:51.784  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.post(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:12:51.784  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:12:51.784  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/tags/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TagController.editPost(com.xfm.blogs.po.Tag,org.springframework.validation.BindingResult,java.lang.Long,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2019-12-13 17:12:51.788  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/delete],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.delete(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:12:51.789  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.types(org.springframework.ui.Model,org.springframework.data.domain.Pageable)
+2019-12-13 17:12:51.790  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.input()
+2019-12-13 17:12:51.790  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.post(java.lang.String,org.springframework.ui.Model)
+2019-12-13 17:12:51.791  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}/input],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editInput(java.lang.Long,org.springframework.ui.Model)
+2019-12-13 17:12:51.791  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/types/{id}],methods=[POST]}" onto public java.lang.String com.xfm.blogs.web.admin.TypeController.editPost(java.lang.Long,java.lang.String,org.springframework.ui.Model)
+2019-12-13 17:12:51.792  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.index()
+2019-12-13 17:12:51.793  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/blog],methods=[GET]}" onto public java.lang.String com.xfm.blogs.web.IndexController.blog()
+2019-12-13 17:12:51.795  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-12-13 17:12:51.796  INFO 17284 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-12-13 17:12:51.894  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:51.894  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:51.913  INFO 17284 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in controllerExceptionHandler
+2019-12-13 17:12:51.932  INFO 17284 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-12-13 17:12:53.424  INFO 17284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-13 17:12:53.483  INFO 17284 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-12-13 17:12:53.544  INFO 17284 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-12-13 17:12:53.548  INFO 17284 --- [restartedMain] com.xfm.blogs.BlogsApplication           : Started BlogsApplication in 5.964 seconds (JVM running for 130.667)
+2019-12-13 17:13:00.421  INFO 17284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-12-13 17:13:00.422  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-12-13 17:13:00.438  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
